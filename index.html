@@ -1,0 +1,33 @@
+<body>
+
+    <div>태어난연도를 입력하세요:</div>
+    <input type="text" id="ii">
+    <button id="bb">나이계산하기</button>
+    <p>결과가 이곳에 나타납니다.</p>
+  
+  
+    <script>
+  
+          //함수로 만들기
+        function Age( )
+        {
+         // 텍스트를 가져와 숫자로 변환하기
+         let $y = Number(    document.querySelector('#ii').value    );
+         
+         //올해 년도 알아오기
+          let thisYear = new Date().getFullYear();
+        
+          //이름이 p인 태그를 가져옵니다.
+          let $pTag = document.querySelector('p');
+
+          //p태그의 내부 텍스트를 바꿔줍니다.
+           $pTag.innerText ="당신은"+ String(thisYear - $y + 1 )+"살 입니다.";
+        }
+  
+        let $btn = document.querySelector('#bb');
+        $btn.addEventListener('click', Age);
+  
+    </script>
+  
+  </body>
+  
